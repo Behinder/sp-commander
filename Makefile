@@ -28,6 +28,6 @@ $(BUILD_DIR):
 .PHONY: clean 
 
 clean:
-	rm -f $(TARGET)
+	rm -f $(BUILD_DIR)/*
 
 	
