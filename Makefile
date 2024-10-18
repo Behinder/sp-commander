@@ -1,27 +1,23 @@
-# Sciezka do kompilatora
+# compiler path
 CC ?= clang
-
 CFLAGS= -Wall -Wextra
-
 LIBS= -lncurses
-
-TARGET=main
+TARGET=pscommander
 
 SRC = $(wildcard *.cpp)
 
-# Build directory
 BUILD_DIR = build
 
-# Rule to compile .cpp files into .o (object files)
+# OBJECT FILES
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
 	$(CC) $(CFLAGS)  $< -o $@  $(LIBS)
 	
-#BUILD TARGET for final executable
-$(BUILD_DIR)/$(TARGET): $(BUILD_DIR)/$(SRC:.cpp=.o)
-	$(CC) $(CFLAGS) $(SRC) -o $^ $(LIBS)
+# OUTPUT EXECUTABLE
+OBJ = $(patsubst %.cpp, $(BUILD_DIR)/%.o, $(SRC))
+$(BUILD_DIR)/$(TARGET): $(OBJ)
+	$(CC) $(CFLAGS)  -o $(BUILD_DIR)/$(TARGET) $(SRC) $(LIBS)
 
-
-# Create the build directory if it doesn't exist
+# OUT DIR
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 
