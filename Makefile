@@ -10,12 +10,12 @@ BUILD_DIR = build
 
 # OBJECT FILES
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
-	$(CC) $(CFLAGS)  $< -o $@  $(LIBS)
+	$(CC) $(CFLAGS) -c $< -o $@  $(LIBS)
 	
 # OUTPUT EXECUTABLE
 OBJ = $(patsubst %.cpp, $(BUILD_DIR)/%.o, $(SRC))
 $(BUILD_DIR)/$(TARGET): $(OBJ)
-	$(CC) $(CFLAGS)  -o $(BUILD_DIR)/$(TARGET) $(SRC) $(LIBS)
+	$(CC) $(CFLAGS)  -o $(BUILD_DIR)/$(TARGET) $(OBJ) $(LIBS)
 
 # OUT DIR
 $(BUILD_DIR):
