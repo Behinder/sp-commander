@@ -18,7 +18,7 @@ $(BUILD_DIR)/$(TARGET): $(BUILD_DIR)/$(SRC:.cpp=.o)
 
 # Rule to compile .cpp files into .o (object files)
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
-	$(CC) $(CFLAGS)  $< -o $@
+	$(CC) $(CFLAGS)  $< -o $@  $(LIBS)
 
 # Create the build directory if it doesn't exist
 $(BUILD_DIR):
