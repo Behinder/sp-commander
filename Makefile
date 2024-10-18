@@ -7,7 +7,7 @@ LIBS= -lncurses
 
 TARGET=main
 
-SRC = main.cpp
+SRC = $(wildcard *.cpp)
 
 # Build directory
 BUILD_DIR = build
