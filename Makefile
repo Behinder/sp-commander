@@ -1,5 +1,5 @@
 # Sciezka do kompilatora
-CC=/opt/local/bin/clang++
+CC ?= clang
 
 CFLAGS= -Wall -Wextra
 
