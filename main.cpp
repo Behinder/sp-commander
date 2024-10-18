@@ -1,6 +1,6 @@
 #include <ncurses.h>
 #include "examples.h"
 int main() {
-    testMouseCursor();
+    testKbdAndMouseCursor();
     return 0;
 }

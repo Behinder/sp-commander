@@ -1,6 +1,6 @@
 #ifndef EXAMPLES_H
 #define EXAMPLES_H
 
-void testMouseCursor();
+void testKbdAndMouseCursor();
 
 #endif // EXAMPLES_H

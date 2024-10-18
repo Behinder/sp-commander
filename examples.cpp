@@ -1,6 +1,6 @@
 #include <ncurses.h>
 
-void testMouseCursor() {
+void testKbdAndMouseCursor() {
     initscr();
     noecho();
     cbreak();
