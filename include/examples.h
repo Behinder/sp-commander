@@ -3,5 +3,6 @@
 
 void testSimpleWindow();
 void testKbdAndMouseCursor();
+void testSimpleFullWindow();
 
 #endif // EXAMPLES_H
