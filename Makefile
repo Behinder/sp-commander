@@ -1,5 +1,5 @@
 # compiler path
-CC ?= clang
+CC ?= clang++
 CFLAGS= -Wall -Wextra
 LIBS= -lncurses
 TARGET=pscommander
