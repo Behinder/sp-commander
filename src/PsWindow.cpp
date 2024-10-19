@@ -2,6 +2,13 @@
 #include <vector>
 #include <string>
 
+class PSStatusBar{
+
+};
+class PSMenuBar{
+
+};
+
 class PSWindow {
 public:
     char* title;
@@ -25,4 +32,11 @@ public:
         window.show();
         }
     };
+};
+
+class PSScreen{
+    public:
+    PSMenuBar MenuBar;
+    TiledView MainView;
+    PSStatusBar StatusBar;
 };
