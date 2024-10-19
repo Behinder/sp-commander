@@ -1,5 +1,5 @@
 #include <ncurses.h>
-#include "examples.h"
+#include "../include/examples.h"
 int main() {
     testSimpleWindow();
     testKbdAndMouseCursor();
