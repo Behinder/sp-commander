@@ -6,3 +6,4 @@
 4. stub statusbar
 5. stub menubar
 6. allow resizing terminal without crashes (getmaxyx() method perhaps before 'refresh')
+7. (stub?) methods for listing dirs and files, method for 'touch', delete, etc, 
