@@ -14,7 +14,7 @@ public:
     char* title;
     PSWindow(const std::string& title){}
     void show() {
-        std::cout << "Showing window: " << title << std::endl;
+        
     };
 };
 
