@@ -1,5 +1,23 @@
 #include <ncurses.h>
 
+
+
+/// @brief 
+void testSimpleWindow(){
+    initscr();
+    WINDOW *win = newwin(15, 17, 2, 10);
+    refresh();
+    box(win, 0, 0);
+    mvwprintw(win, 0, 1, "Greeter");
+    mvwprintw(win, 1, 1, "Hello");
+    wrefresh(win);
+    getch();
+    clear();
+    endwin();
+}
+
+
+/// @brief testing code for keyboard and mouse interaction with ncurses
 void testKbdAndMouseCursor() {
     initscr();
     noecho();
@@ -44,6 +62,5 @@ void testKbdAndMouseCursor() {
         mvprintw(y, x, "@"); 
         refresh();
     }
-
     endwin();
 }
