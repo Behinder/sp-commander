@@ -13,11 +13,30 @@ class PSWindow {
 public:
     char* title;
     PSWindow(const std::string& title){}
-    void show() {
+    virtual void show() {
         
     };
+
+    virtual ~PSWindow() = default;
 };
 
+class ExplorerWindow : public PSWindow {
+    public:
+    ExplorerWindow(const std::string& title) : PSWindow(title) {}
+
+    void show() override {
+        PSWindow::show();
+    }
+};
+
+class EditorWindow : public PSWindow{
+    public:
+    EditorWindow(const std::string& title) : PSWindow(title) {}
+
+    void show() override {
+        PSWindow::show();
+    }
+};
 
 class TiledView {
 public:
